@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Registration Page </title>
+</head>
+<body>
+<center><h1> QUIZ APP REGISTRATION </h1></center>
+<br>
+<form action="Register.php" method="POST">
+Name:
+<input type="text" name="name"><br>
+<br>
+Register Number:
+<input type="number" name="registernumber"><br>
+<br>
+Department:
+<input type="text" name="department"><br>
+<br>
+Password:
+<input type="password" name="pass" id="pass"><br>
+<br>
+Retype Password:
+<input type="password" id="repass" name="repass"><br>
+<br>
+Date of Birth:
+<input type="date" name="dob"><br>
+<br>
+email:
+<input type="email" name="email"><br>
+<br>
+Phone No:
+<input type="number" name="phoneno"><br>
+<br>
+Gender:
+<input type="radio" name="gender" value="m">Male
+<input type="radio" name="gender" value="f">Female 
+<br>
+<br>
+City:
+<select name="city">
+<option value="null" selected>Choose one city</option>
+<option value="ch" >Chennai</option>
+<option value="ba" >Bengaluru</option>
+<option value="hy" >Hydrabad</option>
+</select><br>
+<br>
+<input type="submit" onsubmit="validate_password()" value="Submit">
+</form>
+<script>
+function validate_password()
+{
+var a=document.getElementById("pass");
+var b=document.getElementById("repass");
+if a!=b
+  alert("Not matched")
+}
+</script>
+</body>
+</html>
